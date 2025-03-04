@@ -70,7 +70,7 @@ async def predict(request: Request):
         
         # Get the class name
         try:
-            predicted_class = class_names[int(prediction[0])]
+            predicted_class = str(prediction[0])
         except Exception as class_error:
             print(f"Class selection error: {class_error}")
             return JSONResponse(
